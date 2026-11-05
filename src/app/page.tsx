@@ -1,3 +1,9 @@
+import Navbar from "@/layout/Navbar/Navbar";
+
 export default function Home() {
-  return <div>Lanka stay Accommodation</div>;
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
 }
