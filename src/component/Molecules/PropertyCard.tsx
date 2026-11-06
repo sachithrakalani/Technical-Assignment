@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, MapPin, Users } from "lucide-react";
+import { MapPin, Users } from "lucide-react";
 import type { Property } from "@/data/properties";
 import { photo, formatPrice } from "@/lib/stays";
 
@@ -40,7 +40,7 @@ export default function PropertyCard({ property }: { property: Property }) {
             className="inline-flex items-center gap-1 text-xs font-semibold"
             aria-label={`View details for ${property.name}`}
           >
-            View details <ArrowUpRight size={16} />
+            View details
           </Link>
         </div>
       </div>

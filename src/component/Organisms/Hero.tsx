@@ -1,12 +1,9 @@
-import { ArrowUpRight } from "lucide-react";
 import Container from "../Atoms/Container";
 
 export default function Hero() {
   return (
     <section
-      className="relative flex min-h-120  items-center bg-cover bg-no-repeat 
-                bg-center px-5 py-16 text-white sm:min-h-137.5 sm:px-8 
-                sm:py-20 md:min-h-150 md:bg-position-[center_52%] lg:min-h-162.5 lg:px-[8%] lg:pt-17.5 lg:pb-37.5"
+      className="relative flex min-h-120  items-center bg-cover bg-no-repeat bg-center px-5 py-16 text-white sm:min-h-137.5 sm:px-8 sm:py-20 md:min-h-150 md:bg-position-[center_52%] lg:min-h-162.5 lg:px-[8%] lg:pt-17.5 lg:pb-37.5"
       style={{
         backgroundImage: `
       linear-gradient(90deg,#052a27cc,#052a2720),
@@ -29,7 +26,7 @@ export default function Hero() {
           href="#stays"
           className="mt-8 inline-flex items-center gap-3 border-b border-white/50 pb-2 text-sm"
         >
-          Explore the collection <ArrowUpRight size={18} />
+          Explore the collection 
         </a>
       </Container>
     </section>

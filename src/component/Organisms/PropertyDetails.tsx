@@ -1,10 +1,14 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
 import { Car, MapPin, Waves, Wifi, Wind } from "lucide-react";
 import type { Property } from "@/data/properties";
-import { photo } from "@/lib/stays";
+import { photo, formatPrice } from "@/lib/stays";
 import Container from "../Atoms/Container";
 import SectionHeading from "../Atoms/SectionHeading";
+import DateFields from "../Molecules/DateFields";
+import Button from "../Atoms/Button";
+import BookingForm from "./BookingForm";
 const amenities = [
   { Icon: Wifi, label: "Wi-Fi" },
   { Icon: Waves, label: "Swimming pool" },
@@ -12,11 +16,13 @@ const amenities = [
   { Icon: Car, label: "Free parking" },
 ];
 export default function PropertyDetails({ property }: { property: Property }) {
+  const [dates, setDates] = useState({ checkin: "", checkout: "" });
+  const [booking, setBooking] = useState(false);
   return (
     <main>
       <Container className="py-10 md:py-14">
         <Link href="/explore" className="mb-8 inline-block text-sm">
-          ← Explore all stays
+          Explore all stays
         </Link>
         <p className="mb-3 text-xs tracking-widest text-amber-800 uppercase">
           {property.type} · {property.location}
@@ -65,8 +71,32 @@ export default function PropertyDetails({ property }: { property: Property }) {
               ))}
             </div>
           </section>
+          <aside className="self-start rounded-xl border border-stone-200 p-6 shadow-lg shadow-emerald-950/5">
+            <p className="text-sm">
+              <strong className="text-2xl">
+                LKR {formatPrice(property.price)}
+              </strong>{" "}
+              / night
+            </p>
+            <div className="my-6 grid grid-cols-2 gap-4">
+              <DateFields
+                {...dates}
+                onChange={(key, value) => setDates({ ...dates, [key]: value })}
+              />
+            </div>
+            <Button className="w-full" onClick={() => setBooking(true)}>
+              Booking request 
+            </Button>
+          </aside>
         </div>
       </Container>
+      {booking && (
+        <BookingForm
+          property={property}
+          initialDates={dates}
+          onClose={() => setBooking(false)}
+        />
+      )}
     </main>
   );
 }

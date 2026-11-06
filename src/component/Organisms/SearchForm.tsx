@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { ArrowUpRight } from "lucide-react";
 import { properties } from "@/data/properties";
 import {
   emptySearch,
@@ -77,7 +76,7 @@ export default function SearchForm({
         </select>
       </Field>
       <Button type="submit" className="sm:col-span-2 lg:col-span-1">
-        Find my stay <ArrowUpRight size={18} />
+        Find my stay 
       </Button>
       {error && (
         <p
