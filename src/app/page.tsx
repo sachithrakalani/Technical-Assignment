@@ -1,3 +1,5 @@
+import Stays from "@/component/Templates/Stays";
+
 export default function Home() {
-  return <div>Lanka stay Accommodation</div>;
+  return <Stays />;
 }
