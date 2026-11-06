@@ -1,11 +1,5 @@
-import Hero from "@/component/Organisms/Hero";
-import PropertyCollection from "@/component/Organisms/PropertyCollection";
+import Stays from "@/component/Templates/Stays";
 
 export default function Home() {
-  return (
-    <div>
-      <Hero />
-      <PropertyCollection />
-    </div>
-  );
+  return <Stays />;
 }

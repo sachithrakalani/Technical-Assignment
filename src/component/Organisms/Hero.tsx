@@ -1,4 +1,6 @@
+import { ArrowUpRight } from "lucide-react";
 import Container from "../Atoms/Container";
+
 export default function Hero() {
   return (
     <section
@@ -23,6 +25,12 @@ export default function Hero() {
           <br />
           across the island
         </p>
+        <a
+          href="#stays"
+          className="mt-8 inline-flex items-center gap-3 border-b border-white/50 pb-2 text-sm"
+        >
+          Explore the collection <ArrowUpRight size={18} />
+        </a>
       </Container>
     </section>
   );
