@@ -1,10 +1,11 @@
 import Hero from "@/component/Organisms/Hero";
-import Navbar from "@/layout/Navbar/Navbar";
+import PropertySection from "@/component/Organisms/PropertyCollection";
 
 export default function Home() {
   return (
     <div>
       <Hero />
+      <PropertySection />
     </div>
   );
 }
