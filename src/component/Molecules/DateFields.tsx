@@ -15,7 +15,7 @@ export default function DateFields({
 }) {
   return (
     <>
-      <Field label="Check-iniii">
+      <Field label="Check-in">
         <input
           className={inputStyles}
           name="checkin"

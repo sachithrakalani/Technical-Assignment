@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,7 +65,6 @@ export default function Navbar() {
           className="hidden items-center gap-2 rounded-lg bg-[#1d563e] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#c69b50] lg:flex"
         >
           Find a stay
-          <ArrowUpRight size={18} />
         </Link>
 
         <button
@@ -121,7 +120,6 @@ export default function Navbar() {
             className="mt-3 flex items-center justify-center gap-2 rounded-lg bg-[#1d563e] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#c69b50]"
           >
             Find a stay
-            <ArrowUpRight size={18} />
           </Link>
         </nav>
       </div>
