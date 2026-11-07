@@ -70,6 +70,9 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "Close navigation" : "Open navigation"}
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
           className="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 text-[#1d563e] transition hover:bg-gray-100 lg:hidden"
         >
           {isOpen ? <X size={25} /> : <Menu size={25} />}
@@ -77,9 +80,15 @@ export default function Navbar() {
       </div>
 
       <div
-        className={`overflow-hidden border-t border-gray-100 bg-white transition-all duration-300 ease-in-out lg:hidden ${
-          isOpen ? "h-screen opacity-100" : "h-screen opacity-0"
-        }`}
+        id="mobile-navigation"
+        hidden={!isOpen}
+        onKeyDown={(event) => {
+          if (event.key === "Escape") {
+            closeMenu();
+            document.querySelector<HTMLButtonElement>('[aria-controls="mobile-navigation"]')?.focus();
+          }
+        }}
+        className="absolute inset-x-0 top-full max-h-[calc(100dvh-5rem)] overflow-y-auto border-t border-gray-100 bg-white shadow-lg lg:hidden"
       >
         <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-5 py-4 sm:px-6">
           <Link

@@ -11,8 +11,8 @@ export default function Hero() {
     `,
       }}
     >
-      <Container className="pt-16 pb-28">
-        <h1 className="mb-6 font-serif text-5xl leading-[1.1] tracking-tight md:text-7xl">
+      <Container className="py-8 sm:pt-16 sm:pb-28">
+        <h1 className="mb-6 font-serif text-4xl leading-[1.1] tracking-tight sm:text-5xl md:text-7xl">
           Discover your perfect
           <br />
           stay in <em className="text-amber-100">Sri Lanka.</em>

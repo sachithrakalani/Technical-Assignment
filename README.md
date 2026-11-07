@@ -9,7 +9,7 @@ npm run dev
 # or
 yarn dev
 # or
-pnpm dev
+pnpm 
 # or
 bun dev
 ```
@@ -31,6 +31,28 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Link [Website link](https://technical-assignment-lanka-stay.vercel.app/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Technologies 
+
+- Next.js: Used as the main frontend framework.
+- React: Used to build reusable and interactive UI components.
+- TypeScript: Used to improve code quality and maintainability through type safety.
+- Tailwind CSS: Used for styling and implementing responsive layouts.
+- Lucide React: Used for consistent and modern icons.
+
+## Atomic design structure
+
+- `src/component/Atoms`: Button, Container, Field and SectionHeading primitives, styled with Tailwind utilities.
+- `src/component/Molecules`: composed DateFields and PropertyCard.
+- `src/component/Organisms`: Hero, SearchForm, PropertyCollection, PropertyDetails and BookingDialog.
+- `src/component/Templates`: StaysTemplate and EditorialTemplate compose page sections.
+- `src/layout/Navbar`: Navbar.
+- `src/layout/Footer`: Footer.
+- `src/app`: route-level pages and the shared application layout.
+- `src/data/properties.ts`: fictional property data and its TypeScript type.
+- `src/lib/stays.ts`: shared search types, date validation and formatting.
+
+## Available features
+
+Browse the home and Explore pages, filter stays by destination and guest capacity, view property details, and try a booking request form with guest details and date validation. About and Contact pages and responsive navigation are also included.

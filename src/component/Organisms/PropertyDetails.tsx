@@ -78,7 +78,7 @@ export default function PropertyDetails({ property }: { property: Property }) {
               </strong>{" "}
               / night
             </p>
-            <div className="my-6 grid grid-cols-2 gap-4">
+            <div className="my-6 grid gap-4 sm:grid-cols-2">
               <DateFields
                 {...dates}
                 onChange={(key, value) => setDates({ ...dates, [key]: value })}
