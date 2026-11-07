@@ -132,7 +132,7 @@ export default function BookingForm({
                 placeholder="+94 77 123 4567"
               />
             </Field>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid gap-4 sm:grid-cols-2">
               <DateFields
                 {...dates}
                 required
